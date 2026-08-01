@@ -1,10 +1,10 @@
-domain: example.com
-url: https://example.com
-baseurl: "/wind"
+domain: LattVines.hithub.io
+url: https://LattVines.github.io
+baseurl: "/riverside-shack"
 
-title: Wind
-email: wind@example.com
-author: Wind Sample
+title: riverside-shack
+email: tartlegames@gmail.com
+author: Tartle Wizard
 
 lang: en
 
@@ -15,7 +15,7 @@ color: "#13ccf9"
 # disqus:
 #   shortname: example-com
 #
-rrss:
-  email: "example@example.cl"
-  telegram: "https://t.me/"
-  discord: "https://discord.com/"
+# rrss:
+#   email: "example@example.cl"
+#   telegram: "https://t.me/"
+#   discord: "https://discord.com/"
