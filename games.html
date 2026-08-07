@@ -4,7 +4,32 @@ title: games
 ---
 
 <style>
+  .games-intro {
+    max-width: 65ch;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+  }
+  .games-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 2rem;
+  }
+  .game-frame-wrapper {
+    position: relative;
+    width: 552px;
+    max-width: 100%;
+    height: 167px;
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
   .skeleton {
+    position: absolute;
+    inset: 0;
+    border-radius: 0.25rem;
     background: linear-gradient(100deg, #e2e8f0 30%, #f1f5f9 50%, #e2e8f0 70%);
     background-size: 200% 100%;
     animation: shimmer 1.6s infinite;
@@ -17,149 +42,155 @@ title: games
     0% { background-position: 200% 0; }
     100% { background-position: -200% 0; }
   }
+  .lazy-itch {
+    position: relative;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
 </style>
 
-<div class="max-w-prose mx-auto pt-8 pb-6 text-center">
+<div class="games-intro">
   <p class="text-lg dark:text-slate-300">
     Some of the games I've made. Some were made for game jams over a single weekend.
   </p>
 </div>
 
-<div class="flex flex-col items-center gap-4 pb-8">
+<div class="games-list">
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/2173781" width="552" height="167"><a href="https://tartlegames.itch.io/input-brain">Input Brain - zine for Vast Grimm by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/2173781" width="552" height="167"><a href="https://tartlegames.itch.io/input-brain">Input Brain - zine for Vast Grimm by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/506594?bg_color=3a5e75&amp;fg_color=050505&amp;link_color=ffffff&amp;border_color=bebebe" width="552" height="167"><a href="https://tartlegames.itch.io/my-dolls-house">My Doll's House by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/506594?bg_color=3a5e75&amp;fg_color=050505&amp;link_color=ffffff&amp;border_color=bebebe" width="552" height="167"><a href="https://tartlegames.itch.io/my-dolls-house">My Doll's House by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/221727?bg_color=492fa7&amp;fg_color=e3e3e3&amp;link_color=ffd629&amp;border_color=3d3d3d" width="552" height="167"><a href="https://tartlegames.itch.io/ooze-meadow">Ooze Meadow by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/221727?bg_color=492fa7&amp;fg_color=e3e3e3&amp;link_color=ffd629&amp;border_color=3d3d3d" width="552" height="167"><a href="https://tartlegames.itch.io/ooze-meadow">Ooze Meadow by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/110456?bg_color=282828&amp;fg_color=ffffff&amp;link_color=fb2115&amp;border_color=5d4d4d" width="552" height="167"><a href="https://tartlegames.itch.io/vulcan-sacrifice">Vulcan Sacrifice by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/110456?bg_color=282828&amp;fg_color=ffffff&amp;link_color=fb2115&amp;border_color=5d4d4d" width="552" height="167"><a href="https://tartlegames.itch.io/vulcan-sacrifice">Vulcan Sacrifice by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/583449?bg_color=2e4128&amp;fg_color=36a72c&amp;link_color=75962e&amp;border_color=818181" width="552" height="167"><a href="https://tartlegames.itch.io/cthulhu-time">Cthulhu Time by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/583449?bg_color=2e4128&amp;fg_color=36a72c&amp;link_color=75962e&amp;border_color=818181" width="552" height="167"><a href="https://tartlegames.itch.io/cthulhu-time">Cthulhu Time by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/211273?bg_color=CFB896&amp;fg_color=242424&amp;link_color=fff380&amp;border_color=cbcbc3" width="552" height="167"><a href="https://tartlegames.itch.io/bagplus5">Haversack (Bag +5) by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/211273?bg_color=CFB896&amp;fg_color=242424&amp;link_color=fff380&amp;border_color=cbcbc3" width="552" height="167"><a href="https://tartlegames.itch.io/bagplus5">Haversack (Bag +5) by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/51658?bg_color=4d4d4d&amp;fg_color=d1d1d1&amp;link_color=a2ff2f&amp;border_color=636363" width="552" height="167"><a href="https://tartlegames.itch.io/tartle-rpg-tool">RPG Apparatus by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/51658?bg_color=4d4d4d&amp;fg_color=d1d1d1&amp;link_color=a2ff2f&amp;border_color=636363" width="552" height="167"><a href="https://tartlegames.itch.io/tartle-rpg-tool">RPG Apparatus by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/370478?bg_color=59c1e4&amp;fg_color=ffffff&amp;link_color=1d5613&amp;border_color=44b9d8" width="552" height="167"><a href="https://tartlegames.itch.io/catermeow">Catermeow Goes To College by Tartle Games, fredric</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/370478?bg_color=59c1e4&amp;fg_color=ffffff&amp;link_color=1d5613&amp;border_color=44b9d8" width="552" height="167"><a href="https://tartlegames.itch.io/catermeow">Catermeow Goes To College by Tartle Games, fredric</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/211283?bg_color=26495C&amp;fg_color=cfcfcf&amp;link_color=ffffff&amp;border_color=3a3c3c" width="552" height="167"><a href="https://tartlegames.itch.io/nihilism-boy">Nihilism Boy by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/211283?bg_color=26495C&amp;fg_color=cfcfcf&amp;link_color=ffffff&amp;border_color=3a3c3c" width="552" height="167"><a href="https://tartlegames.itch.io/nihilism-boy">Nihilism Boy by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/280605?bg_color=414141&amp;fg_color=2acdff&amp;link_color=f1f4fd&amp;border_color=3c3c3c" width="552" height="167"><a href="https://tartlegames.itch.io/get-to-88">Get To 88 by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/280605?bg_color=414141&amp;fg_color=2acdff&amp;link_color=f1f4fd&amp;border_color=3c3c3c" width="552" height="167"><a href="https://tartlegames.itch.io/get-to-88">Get To 88 by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/88416?bg_color=68cfce&amp;fg_color=3b3b3b&amp;link_color=ffffff&amp;border_color=5478dc" width="552" height="167"><a href="https://tartlegames.itch.io/stay-in-your-seat">Stay In Your Seat by Tartle Games, CrummyGamer</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/88416?bg_color=68cfce&amp;fg_color=3b3b3b&amp;link_color=ffffff&amp;border_color=5478dc" width="552" height="167"><a href="https://tartlegames.itch.io/stay-in-your-seat">Stay In Your Seat by Tartle Games, CrummyGamer</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/155403?bg_color=faf9f0&amp;fg_color=222222&amp;link_color=37a027&amp;border_color=00d4db" width="552" height="167"><a href="https://tartlegames.itch.io/burger-panic">Burger Panic by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/155403?bg_color=faf9f0&amp;fg_color=222222&amp;link_color=37a027&amp;border_color=00d4db" width="552" height="167"><a href="https://tartlegames.itch.io/burger-panic">Burger Panic by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/104106?bg_color=191919&amp;fg_color=eb4242&amp;link_color=ff9e9e&amp;border_color=a16060" width="552" height="167"><a href="https://tartlegames.itch.io/not-enough-meatballs">Not Enough Meatballs by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/104106?bg_color=191919&amp;fg_color=eb4242&amp;link_color=ff9e9e&amp;border_color=a16060" width="552" height="167"><a href="https://tartlegames.itch.io/not-enough-meatballs">Not Enough Meatballs by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/125639?bg_color=787878&amp;fg_color=a0ff62&amp;link_color=69b937&amp;border_color=626262" width="552" height="167"><a href="https://tartlegames.itch.io/monster-bean-evolution">Monster Bean Evolution by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/125639?bg_color=787878&amp;fg_color=a0ff62&amp;link_color=69b937&amp;border_color=626262" width="552" height="167"><a href="https://tartlegames.itch.io/monster-bean-evolution">Monster Bean Evolution by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/51647?bg_color=ffffff&amp;fg_color=303030&amp;link_color=000000&amp;border_color=71a8d2" width="552" height="167"><a href="https://tartlegames.itch.io/penguins-on-ice">Penguin Bowling On Ice by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/51647?bg_color=ffffff&amp;fg_color=303030&amp;link_color=000000&amp;border_color=71a8d2" width="552" height="167"><a href="https://tartlegames.itch.io/penguins-on-ice">Penguin Bowling On Ice by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/94288?bg_color=666666&amp;fg_color=d9d9d9&amp;link_color=5abe76&amp;border_color=626262" width="552" height="167"><a href="https://tartlegames.itch.io/the-tale-of-wheezing-gloop">The Tale of Wheezing Gloop by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/94288?bg_color=666666&amp;fg_color=d9d9d9&amp;link_color=5abe76&amp;border_color=626262" width="552" height="167"><a href="https://tartlegames.itch.io/the-tale-of-wheezing-gloop">The Tale of Wheezing Gloop by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/1254354?bg_color=ff49da&amp;fg_color=202020&amp;link_color=ffffff&amp;border_color=0180e5" width="552" height="167"><a href="https://tartlegames.itch.io/star-lard-235">STAR LARD 235 by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/1254354?bg_color=ff49da&amp;fg_color=202020&amp;link_color=ffffff&amp;border_color=0180e5" width="552" height="167"><a href="https://tartlegames.itch.io/star-lard-235">STAR LARD 235 by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/1121603?bg_color=000000&amp;fg_color=fcd723&amp;link_color=ffffff&amp;border_color=333333" width="552" height="167"><a href="https://tartlegames.itch.io/optinomicon">Optinomicon by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/1121603?bg_color=000000&amp;fg_color=fcd723&amp;link_color=ffffff&amp;border_color=333333" width="552" height="167"><a href="https://tartlegames.itch.io/optinomicon">Optinomicon by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/726529?bg_color=6b6285&amp;fg_color=222222&amp;link_color=ffffff&amp;border_color=bebebe" width="552" height="167"><a href="https://tartlegames.itch.io/franz-kafka-experience">Franz Kafka : The TTRPG Experience by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/726529?bg_color=6b6285&amp;fg_color=222222&amp;link_color=ffffff&amp;border_color=bebebe" width="552" height="167"><a href="https://tartlegames.itch.io/franz-kafka-experience">Franz Kafka : The TTRPG Experience by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/947744?bg_color=ffe90c&amp;fg_color=222222&amp;link_color=f700b5&amp;border_color=9f9f9f" width="552" height="167"><a href="https://tartlegames.itch.io/mork-borg-leprechaun">Leprechaun - {FÖLK-LORE Jam} by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/947744?bg_color=ffe90c&amp;fg_color=222222&amp;link_color=f700b5&amp;border_color=9f9f9f" width="552" height="167"><a href="https://tartlegames.itch.io/mork-borg-leprechaun">Leprechaun - {FÖLK-LORE Jam} by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/51657?bg_color=111a37&amp;fg_color=ffffff&amp;link_color=0070d6&amp;border_color=333333" width="552" height="167"><a href="https://tartlegames.itch.io/deep-sea-fish-kebab">Deep Sea Fish Kebab by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/51657?bg_color=111a37&amp;fg_color=ffffff&amp;link_color=0070d6&amp;border_color=333333" width="552" height="167"><a href="https://tartlegames.itch.io/deep-sea-fish-kebab">Deep Sea Fish Kebab by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/82018?bg_color=294b56&amp;fg_color=55c8d3&amp;link_color=ed0d0d&amp;border_color=4f535a" width="552" height="167"><a href="https://tartlegames.itch.io/floppy-disk-glitch">Floppy Disk Glitch by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/82018?bg_color=294b56&amp;fg_color=55c8d3&amp;link_color=ed0d0d&amp;border_color=4f535a" width="552" height="167"><a href="https://tartlegames.itch.io/floppy-disk-glitch">Floppy Disk Glitch by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/59527?bg_color=424242&amp;fg_color=e6e6e6&amp;link_color=7db323&amp;border_color=4a5c73" width="552" height="167"><a href="https://tartlegames.itch.io/continuitysloth">Tartle's Sloth Continuity by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/59527?bg_color=424242&amp;fg_color=e6e6e6&amp;link_color=7db323&amp;border_color=4a5c73" width="552" height="167"><a href="https://tartlegames.itch.io/continuitysloth">Tartle's Sloth Continuity by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/53368?bg_color=363636&amp;fg_color=ffffff&amp;link_color=ff8400&amp;border_color=7a7a7a" width="552" height="167"><a href="https://tartlegames.itch.io/cube-zoid">Cube Zoid by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/53368?bg_color=363636&amp;fg_color=ffffff&amp;link_color=ff8400&amp;border_color=7a7a7a" width="552" height="167"><a href="https://tartlegames.itch.io/cube-zoid">Cube Zoid by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/51644?bg_color=353535&amp;fg_color=ffffff&amp;link_color=ff144c&amp;border_color=9f2a6a" width="552" height="167"><a href="https://tartlegames.itch.io/raspberry-jump">Raspberry Jump by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/51644?bg_color=353535&amp;fg_color=ffffff&amp;link_color=ff144c&amp;border_color=9f2a6a" width="552" height="167"><a href="https://tartlegames.itch.io/raspberry-jump">Raspberry Jump by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/51653?bg_color=7fc2c2&amp;fg_color=2b2b2b&amp;link_color=2f9d98&amp;border_color=c9ccc8" width="552" height="167"><a href="https://tartlegames.itch.io/joomp-berd">joomp berd by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/51653?bg_color=7fc2c2&amp;fg_color=2b2b2b&amp;link_color=2f9d98&amp;border_color=c9ccc8" width="552" height="167"><a href="https://tartlegames.itch.io/joomp-berd">joomp berd by Tartle Games</a></iframe>
   </div>
 
-  <div class="game-frame-wrapper relative rounded overflow-hidden" style="width:552px; max-width:100%; height:167px;">
-    <div class="skeleton absolute inset-0 rounded"></div>
-    <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/399525?bg_color=000000&amp;fg_color=222222&amp;link_color=555555&amp;border_color=333333" width="552" height="167"><a href="https://tartlegames.itch.io/sensory-deprivation-simulator">Sensory Deprivation Simulator by Tartle Games</a></iframe>
+  <div class="game-frame-wrapper">
+    <div class="skeleton"></div>
+    <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/399525?bg_color=000000&amp;fg_color=222222&amp;link_color=555555&amp;border_color=333333" width="552" height="167"><a href="https://tartlegames.itch.io/sensory-deprivation-simulator">Sensory Deprivation Simulator by Tartle Games</a></iframe>
   </div>
 
 </div>
@@ -180,7 +211,7 @@ title: games
         const remaining = Math.max(0, minDisplay - elapsed);
 
         setTimeout(function () {
-          el.classList.remove('opacity-0');
+          el.style.opacity = '1';
           const wrapper = el.closest('.game-frame-wrapper');
           const skeleton = wrapper ? wrapper.querySelector('.skeleton') : null;
           if (skeleton) skeleton.remove();
