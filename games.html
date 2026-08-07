@@ -172,12 +172,19 @@ title: games
     function loadNext() {
       if (index >= iframes.length) return;
       const el = iframes[index];
+      const startTime = Date.now();
+      const minDisplay = 600; // ms — guarantees skeleton is visible
 
       el.addEventListener('load', function () {
-        el.classList.remove('opacity-0');
-        const wrapper = el.closest('.game-frame-wrapper');
-        const skeleton = wrapper ? wrapper.querySelector('.skeleton') : null;
-        if (skeleton) skeleton.remove();
+        const elapsed = Date.now() - startTime;
+        const remaining = Math.max(0, minDisplay - elapsed);
+
+        setTimeout(function () {
+          el.classList.remove('opacity-0');
+          const wrapper = el.closest('.game-frame-wrapper');
+          const skeleton = wrapper ? wrapper.querySelector('.skeleton') : null;
+          if (skeleton) skeleton.remove();
+        }, remaining);
       });
 
       el.src = el.dataset.src;
