@@ -10,8 +10,17 @@ title: Games
 </div>
 
 <div class="flex flex-col items-center gap-4 pb-8">
-  <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/2173781" width="552" height="167"><a href="https://tartlegames.itch.io/input-brain">Input Brain - zine for Vast Grimm by Tartle Games</a></iframe>
-  <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/506594?bg_color=3a5e75&amp;fg_color=050505&amp;link_color=ffffff&amp;border_color=bebebe" width="552" height="167"><a href="https://tartlegames.itch.io/my-dolls-house">My Doll's House by Tartle Games</a></iframe>
+
+    <div class="game-frame-wrapper relative" style="width:552px; max-width:100%; height:167px;">
+        <div class="skeleton absolute inset-0 bg-slate-200 dark:bg-slate-700 animate-pulse rounded"></div>
+        <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/2173781" width="552" height="167"><a href="https://tartlegames.itch.io/input-brain">Input Brain - zine for Vast Grimm by Tartle Games</a></iframe>
+    </div>
+
+    <div class="game-frame-wrapper relative" style="width:552px; max-width:100%; height:167px;">
+        <div class="skeleton absolute inset-0 bg-slate-200 dark:bg-slate-700 animate-pulse rounded"></div>
+        <iframe class="lazy-itch relative z-10 opacity-0 transition-opacity duration-500" frameborder="0" data-src="https://itch.io/embed/506594?bg_color=3a5e75&amp;fg_color=050505&amp;link_color=ffffff&amp;border_color=bebebe" width="552" height="167"><a href="https://tartlegames.itch.io/my-dolls-house">My Doll's House by Tartle Games</a></iframe>
+    </div>
+
   <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/221727?bg_color=492fa7&amp;fg_color=e3e3e3&amp;link_color=ffd629&amp;border_color=3d3d3d" width="552" height="167"><a href="https://tartlegames.itch.io/ooze-meadow">Ooze Meadow by Tartle Games</a></iframe>
   <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/110456?bg_color=282828&amp;fg_color=ffffff&amp;link_color=fb2115&amp;border_color=5d4d4d" width="552" height="167"><a href="https://tartlegames.itch.io/vulcan-sacrifice">Vulcan Sacrifice by Tartle Games</a></iframe>
   <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/583449?bg_color=2e4128&amp;fg_color=36a72c&amp;link_color=75962e&amp;border_color=818181" width="552" height="167"><a href="https://tartlegames.itch.io/cthulhu-time">Cthulhu Time by Tartle Games</a></iframe>
@@ -39,6 +48,7 @@ title: Games
   <iframe class="lazy-itch" frameborder="0" data-src="https://itch.io/embed/399525?bg_color=000000&amp;fg_color=222222&amp;link_color=555555&amp;border_color=333333" width="552" height="167"><a href="https://tartlegames.itch.io/sensory-deprivation-simulator">Sensory Deprivation Simulator by Tartle Games</a></iframe>
 </div>
 
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const iframes = document.querySelectorAll('iframe.lazy-itch');
@@ -47,9 +57,16 @@ title: Games
     function loadNext() {
       if (index >= iframes.length) return;
       const el = iframes[index];
+
+      el.addEventListener('load', function () {
+        el.classList.remove('opacity-0');
+        const skeleton = el.previousElementSibling;
+        if (skeleton) skeleton.remove();
+      });
+
       el.src = el.dataset.src;
       index++;
-      setTimeout(loadNext, 400); // 400ms between each request
+      setTimeout(loadNext, 400);
     }
 
     loadNext();
